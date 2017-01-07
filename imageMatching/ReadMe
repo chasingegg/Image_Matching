@@ -1,0 +1,37 @@
+This project has a goal to do image matching of urban constructions based on symmetry features.
+This is a file showing the usage of the files included in the project.
+
+Description of folders and files:
+01 -- image from dataset
+02 -- image from dataset
+      For each pair of images, one of them is in folder 01, and the other is in folder 02.
+
+Common -- Include the header files and cpp files, which defines the basic classes and variables.
+	Common/Commom.h  -- Define a struct of Keypoints and matching parameters.
+	Common/Image.h   -- Header file for Common/Image.cpp.
+	Common/Image.cpp -- Define a class of image, on which all the processes are based on. Matching function also in this file.
+	Common/Log.h     -- Define a class of output messages.
+
+Features -- Include the header files and cpp files to handle features of image.
+	Features/FeatureHandler.h   -- Header file for FeatureHandler.cpp.
+	Features/FeatureHandler.cpp -- This is where the features of an image is handled.
+
+ImageMatch.cpp -- Entrance main is in this file.
+				  Connect the image read-in phase, feature extraction phase, and matching phase.
+				  Generate the results.
+
+demo -- excutable file to show images with matchings(for demo use).
+
+FastVersion -- executable file to directly get the result.
+
+testAccuracy -- Include a function to test the accuracy of the output result.
+	CorrectRes 			-- a file containing the correct result, which is rewritten from the dataset.
+	result 				-- a file containing the output result, which is generated from running FastVersion or demo.
+	testCorrectness.cpp -- Define a function to test the accuracy by comparing the output result with the correct result.
+	GetAccuracy 		-- Executable file. Generated from testCorrectness.cpp.
+
+makefile -- makefile
+
+ReadMe -- this file
+
+UserGuide -- a tutorial to show how to use the codes.
